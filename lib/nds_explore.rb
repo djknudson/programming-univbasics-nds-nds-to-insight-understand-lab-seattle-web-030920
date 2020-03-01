@@ -9,14 +9,23 @@ def pretty_print_nds(nds)
 end
 
 def print_first_directors_movie_titles
-  # counter = 0
-  title_list = []
+  counter = 0
+  # title_list = []
 
-  # while counter < directors_database.length do
-  #   current_movie = directors_database[0][:movies][counter]
-  #   # current_title = current_movie[:title]
-  #   puts current_movie
-  #   counter += 1
+  while counter < directors_database[0][:movies].length do
+    current_movie = directors_database[0][:movies][counter][:title]
+    # current_title = current_movie[:title]
+    puts current_movie
+    counter += 1
+  end
+
+  # ss_movies = directors_database[0][:movies]
+  # index = 0
+  #
+  # while index < ss_movies.length do
+  #   titles = ss_movies[index][:title]
+  #   puts titles
+  #   index +=1
   # end
 
   # directors_database[0][:movies].each { |movie_title|
