@@ -1,23 +1,23 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'pp'
 require 'directors_database'
+require 'pp'
 # Call the method directors_database to retrieve the NDS
 
 def pretty_print_nds(nds)
   # Change the code below to pretty print the nds with pp
-  pp directors_database
+  pp nds
 end
 
 def print_first_directors_movie_titles
-  counter = 0
-  # title_list = []
-
-  while counter < directors_database[0][:movies].length do
-    current_movie = directors_database[0][:movies][counter][:title]
-    # current_title = current_movie[:title]
-    puts current_movie
-    counter += 1
-  end
+  # counter = 0
+  # # title_list = []
+  #
+  # # while counter < directors_database[0][:movies].length do
+  # #   current_movie = directors_database[0][:movies][counter][:title]
+  # #   # current_title = current_movie[:title]
+  # #   puts current_movie
+  # #   counter += 1
+  # # end
 
   # ss_movies = directors_database[0][:movies]
   # index = 0
@@ -35,9 +35,9 @@ def print_first_directors_movie_titles
   # }
   # print title_list
 
-#   directors_database[0][:movies].each do |key, value|
-#     title_list << "#{key[:title]}"
-#   end
+  directors_database[0][:movies].each do |key, value|
+    puts "#{key[:title]}"
+  end
 # output =  title_list.join("\n")
 # print output
 
@@ -48,7 +48,7 @@ def print_first_directors_movie_titles
 # puts directors_database[0][:movies][4][:title]
 # puts directors_database[0][:movies][5][:title]
 
-puts "Jaws\nClose Encounters of the Third Kind\nRaiders of the Lost Ark\nE.T. the Extra-terrestrial\nSchindler's List\nLincoln\n"
+# puts "Jaws\nClose Encounters of the Third Kind\nRaiders of the Lost Ark\nE.T. the Extra-terrestrial\nSchindler's List\nLincoln\n"
 
   # pp directors_database
 end
